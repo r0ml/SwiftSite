@@ -6,12 +6,9 @@ import SwiftSite
 
 
 @main struct MySite : WebSite {
-//  init() {
-//  }
   
-  
-    var body : some Site {
-      Page("index.html") {
+  func body() -> Folder {
+     Page("index.html") {
         "The html for index"
       }
       Page("p2t.html") {
@@ -20,7 +17,6 @@ import SwiftSite
       Page("nia.html") {
         "The HTML for nia"
       }
-      
     }
 }
 
