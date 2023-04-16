@@ -11,32 +11,16 @@ import SwiftSite
   
   
     var body : some Site {
-      IndexPage("index.html")
-      Point2Text
+      Page("index.html") {
+        "The html for index"
+      }
+      Page("p2t.html") {
+        "The HTML for p2t"
+      }
+      Page("nia.html") {
+        "The HTML for nia"
+      }
       
     }
 }
 
-struct IndexPage : Page {
-  var name : String
-  
-  init(_ s : String) {
-      name = s
-  }
-  
-  var body : some Page {
-    "The html for Index"
-  }
-}
-
-struct Point2Text : Page {
-  var body : some Page {
-    "The HTML for p2t"
-  }
-}
-
-struct NoItAll : Page {
-  var body : some Page {
-    "The HTML for nia"
-  }
-}
